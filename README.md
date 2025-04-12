@@ -1,5 +1,5 @@
 # SmartTechDev
-# Salut, moi c'est [Ton Prénom] !
+# Salut, moi c'est ISSOUF OUEDRAOGO !
 
 Bienvenue sur mon profil GitHub. Je suis passionné par :
 - Le développement web
