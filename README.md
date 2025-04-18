@@ -1,3 +1,8 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUEDRAOGO ISSOUF - Portfolio</title>
 # SmartTechDev
 # Salut, moi c'est ISSOUF OUEDRAOGO !
 
@@ -15,11 +20,7 @@ Bienvenue sur mon profil GitHub. Je suis passionné par :
 - Email : ouedraogissouf64@gmail.com
 - WhatsApp : +226 69419145
 
-<!DOCTYPE html><html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OUEDRAOGO ISSOUF - Portfolio</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
