@@ -26,8 +26,6 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h2 { color: #0a3d62; margin-bottom: 15px; }
-        ul { list-style: none; padding-left: 0; }
-        ul li { margin-bottom: 10px; }
 
         /* Header */
         header {
@@ -78,15 +76,44 @@
         .database { background-color: #2ecc71; }
         .tools { background-color: #f39c12; }
 
+        /* Projets (cartes) */
+        #projects ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        #projects li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        #projects li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        #projects strong {
+            color: #0a3d62;
+            font-size: 1.1em;
+        }
+        #projects p {
+            font-size: 0.9em;
+            margin: 8px 0;
+        }
+
         /* Boutons */
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 5px 5px 5px 0;
+            padding: 8px 15px;
+            margin-top: 8px;
             background-color: #e67e22;
             color: white;
             border-radius: 5px;
             font-weight: 600;
+            font-size: 0.9em;
             transition: 0.3s;
         }
         .btn:hover { background-color: #d35400; }
@@ -158,6 +185,22 @@
         <h2>Projets</h2>
         <ul>
             <li>
+                <strong>Application Calculatrice</strong> – Java  
+                <p>Application simple mais optimisée permettant d’effectuer des calculs basiques et scientifiques.</p>
+            </li>
+            <li>
+                <strong>Application de Gestion de Vente</strong> – Laravel + MySQL  
+                <p>Gestion complète des ventes : suivi des stocks, génération automatique de factures, gestion des clients et reporting.</p>
+            </li>
+            <li>
+                <strong>Application de Bibliothèque</strong> – Java + MySQL  
+                <p>Système de gestion des emprunts : inscription des lecteurs, suivi des prêts, disponibilité des livres.</p>
+            </li>
+            <li>
+                <strong>Site Web de Vente d’Habits</strong> – HTML, CSS, JavaScript, PHP  
+                <p>Site e-commerce simple permettant de consulter des articles, gérer un panier et simuler une commande.</p>
+            </li>
+            <li>
                 <strong>Application To-Do List</strong> – React + Node.js + MongoDB  
                 <a href="#" class="btn">Voir sur GitHub</a>
             </li>
@@ -191,12 +234,13 @@
         <p><i class="fas fa-phone"></i> Téléphone : 64732901 / 73626401</p>
         <p><i class="fas fa-envelope"></i> Email : ouedraogissouf64@gmail.com</p>
         <h3>Mes Liens</h3>
+        <a href="https://SmartTechDev52.github.io/SmartTechDev/" class="btn"><i class="fab fa-github"></i> Portfolio en ligne</a>
         <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
         <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </section>
 
     <footer>
-        <p>Mis à jour le 05 septembre 2025 à Ouagadougou</p>
+        <p>Mis à jour le 10 septembre 2025 à Ouagadougou</p>
     </footer>
 
 </body>
