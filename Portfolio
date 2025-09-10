@@ -1,98 +1,203 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OUEDRAOGO ISSOUF - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #0066cc;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #0066cc;
-      margin-top: 2rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    .contact {
-      background: #eee;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUEDRAOGO Issouf - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        a { text-decoration: none; }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 { color: #0a3d62; margin-bottom: 15px; }
+        ul { list-style: none; padding-left: 0; }
+        ul li { margin-bottom: 10px; }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0a3d62, #3c6382);
+            color: white;
+            text-align: center;
+            padding: 50px 20px 30px 20px;
+            position: relative;
+        }
+        header .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+        header h1 { margin: 0; font-size: 2em; }
+        header p { margin: 5px 0 20px; font-size: 1.1em; }
+        nav a {
+            margin: 0 10px;
+            color: #f1f1f1;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #e67e22; }
+
+        /* Badges compétences */
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .badge {
+            padding: 8px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .frontend { background-color: #e74c3c; }
+        .backend { background-color: #3498db; }
+        .database { background-color: #2ecc71; }
+        .tools { background-color: #f39c12; }
+
+        /* Boutons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px 5px 5px 0;
+            background-color: #e67e22;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn:hover { background-color: #d35400; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #eee;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section { margin: 15px 10px; padding: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>OUEDRAOGO ISSOUF</h1>
-    <p>Développeur Informatique - Ouagadougou</p>
-    <p>Contact : 64732901 / 73626401 | ouedraogissouf64@gmail.com</p>
-  </header>  <section>
-    <h2>À propos</h2>
-    <p>Titulaire d'une licence en Informatique de l'Université Norbert Zongo. Passionné par le développement, les réseaux et les systèmes.</p><h2>Éducation</h2>
-<ul>
-  <li><strong>2022-2023</strong> - Licence Informatique - Université Norbert ZONGO</li>
-  <li><strong>2022</strong> - DEUG II - Université Norbert ZONGO</li>
-  <li><strong>2018</strong> - Bac D - Lycée de LA-TODEN, Yako</li>
-  <li><strong>2014</strong> - BEPC - Lycée de LA-TODEN</li>
-</ul>
 
-<h2>Compétences</h2>
-<ul>
-  <li><strong>Systèmes :</strong> Linux, Windows</li>
-  <li><strong>Base de données :</strong> PostgreSQL, MySQL, Oracle</li>
-  <li><strong>Langages :</strong> PHP, Python, Java, C</li>
-  <li><strong>Web :</strong> HTML, CSS, JavaScript</li>
-  <li><strong>Réseaux :</strong> Pare-feux, Routeurs, Câblage</li>
-  <li><strong>Outils :</strong> Microsoft Office, Photoshop, Illustrator</li>
-</ul>
+    <header>
+        <img src="profile-placeholder.png" alt="Photo de Issouf" class="profile-pic">
+        <h1>OUEDRAOGO Issouf</h1>
+        <p>Développeur Full-Stack | Ouagadougou</p>
+        <nav>
+            <a href="#summary">Résumé</a>
+            <a href="#skills">Compétences</a>
+            <a href="#projects">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<h2>Langues</h2>
-<ul>
-  <li>Mooré : lu, écrit, parlé</li>
-  <li>Français : lu, écrit, parlé</li>
-  <li>Anglais : lu, écrit, parlé</li>
-</ul>
+    <section id="summary">
+        <h2>Résumé</h2>
+        <p>Développeur Full-Stack passionné par les technologies web et Java, je crée des applications performantes et sécurisées avec React, Node.js, Laravel et MySQL. Motivé à rejoindre des projets ambitieux et à résoudre des problèmes complexes.</p>
+    </section>
 
-<h2>Intérêts</h2>
-<ul>
-  <li>Football</li>
-  <li>Lecture</li>
-</ul>
+    <section id="skills">
+        <h2>Compétences Full-Stack</h2>
+        <div class="skill-badges">
+            <!-- Frontend -->
+            <span class="badge frontend">HTML</span>
+            <span class="badge frontend">CSS</span>
+            <span class="badge frontend">JavaScript</span>
+            <span class="badge frontend">React</span>
 
-<h2>Références</h2>
-<ul>
-  <li>Gervais K.KOALAGA - 07 01 71 22</li>
-  <li>KONWENSIDA TOUGMA - 75 89 68 75</li>
-</ul>
+            <!-- Backend -->
+            <span class="badge backend">Java</span>
+            <span class="badge backend">Node.js</span>
+            <span class="badge backend">Laravel</span>
+            <span class="badge backend">Django</span>
 
-<h2>Contact</h2>
-<div class="contact">
-  <p>Email : ouedraogissouf64@gmail.com</p>
-  <p>Tél : 64732901 / 73626401</p>
-  <p>Lieu : Ouagadougou</p>
-</div>
+            <!-- Bases de données -->
+            <span class="badge database">MySQL</span>
+            <span class="badge database">PostgreSQL</span>
+            <span class="badge database">MongoDB</span>
 
-<p style="margin-top: 2rem; font-size: 0.9rem;">Mis à jour le 12 avril 2025</p>
+            <!-- Outils -->
+            <span class="badge tools">Git</span>
+            <span class="badge tools">GitHub</span>
+            <span class="badge tools">Docker</span>
+            <span class="badge tools">VS Code</span>
+        </div>
+    </section>
 
-  </section>
+    <section id="projects">
+        <h2>Projets</h2>
+        <ul>
+            <li>
+                <strong>Application To-Do List</strong> – React + Node.js + MongoDB  
+                <a href="#" class="btn">Voir sur GitHub</a>
+            </li>
+            <li>
+                <strong>Blog Full-Stack</strong> – Laravel + MySQL  
+                <a href="#" class="btn">Voir sur GitHub</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Éducation</h2>
+        <ul>
+            <li><strong>Licence Informatique</strong> – Université Norbert ZONGO, UFR/ST (2022-2023)</li>
+            <li><strong>DEUG II</strong> – Université Norbert ZONGO, UFR/ST/INFORMATIQUE (08/2022)</li>
+            <li><strong>Baccalauréat série D</strong> – Lycée Départemental de La-Toden (07/2018)</li>
+        </ul>
+    </section>
+
+    <section id="languages">
+        <h2>Langues</h2>
+        <ul>
+            <li>Mooré : lu, écrit, parlé</li>
+            <li>Français : lu, écrit, parlé</li>
+            <li>Anglais : lu, écrit, parlé</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><i class="fas fa-phone"></i> Téléphone : 64732901 / 73626401</p>
+        <p><i class="fas fa-envelope"></i> Email : ouedraogissouf64@gmail.com</p>
+        <h3>Mes Liens</h3>
+        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </section>
+
+    <footer>
+        <p>Mis à jour le 05 septembre 2025 à Ouagadougou</p>
+    </footer>
+
 </body>
 </html>
