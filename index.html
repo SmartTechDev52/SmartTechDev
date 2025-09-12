@@ -1,283 +1,259 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUEDRAOGO Issouf - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f9;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        a { text-decoration: none; }
-        section {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h2 { color: #0a3d62; margin-bottom: 15px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUEDRAOGO Issouf - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+a { text-decoration: none; }
 
-        header {
-            background: linear-gradient(135deg, #0a3d62, #3c6382);
-            color: white;
-            text-align: center;
-            padding: 50px 20px 30px 20px;
-        }
-        header .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 15px;
-            object-fit: cover;
-            object-position: center 20%;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        header .profile-pic:hover {
-            transform: scale(1.05);
-        }
-        header h1 { margin: 0; font-size: 2em; }
-        header p { margin: 5px 0 20px; font-size: 1.1em; }
-        nav a {
-            margin: 0 10px;
-            color: #f1f1f1;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: #e67e22; }
+header {
+    background: linear-gradient(135deg, #0a3d62, #3c6382);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 30px 20px;
+}
+header .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center 20%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+header .profile-pic:hover { transform: scale(1.05); }
+header h1 { margin: 0; font-size: 2em; }
+header p { margin: 5px 0 20px; font-size: 1.1em; }
+nav a {
+    margin: 0 10px;
+    color: #f1f1f1;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+nav a:hover { color: #e67e22; }
 
-        .skill-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .badge {
-            padding: 8px 12px;
-            border-radius: 20px;
-            color: white;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .badge:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
-        .frontend { background-color: #e74c3c; }
-        .backend { background-color: #3498db; }
-        .database { background-color: #2ecc71; }
-        .tools { background-color: #f39c12; }
-        .secondary { background-color: #95a5a6; }
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+section.visible { opacity:1; transform: translateY(0); }
 
-        #projects ul, #academic-projects ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        #projects li, #academic-projects li {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        #projects li:hover, #academic-projects li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-        #projects strong, #academic-projects strong { color: #0a3d62; font-size: 1.1em; }
-        #projects p, #academic-projects p { font-size: 0.9em; margin: 8px 0; }
+h2 { color: #0a3d62; margin-bottom: 15px; }
 
-        .btn {
-            display: inline-block;
-            padding: 8px 15px;
-            margin-top: 8px;
-            background-color: #e67e22;
-            color: white;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: 0.3s;
-        }
-        .btn:hover { background-color: #d35400; }
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+.badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.badge:hover { transform: scale(1.1); box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+.frontend { background-color: #e74c3c; }
+.backend { background-color: #3498db; }
+.database { background-color: #2ecc71; }
+.tools { background-color: #f39c12; }
+.secondary { background-color: #95a5a6; }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #eee;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
+ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 15px; }
+li { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.4s, box-shadow 0.4s; }
+li:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        @media (max-width: 768px) {
-            section { margin: 15px 10px; padding: 15px; }
-            nav { display: flex; flex-wrap: wrap; justify-content: center; }
-        }
+strong { color: #0a3d62; font-size: 1.1em; }
+p { font-size: 0.9em; margin: 8px 0; }
 
-        /* Modal pour image */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255,255,255,0.3);
-        }
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 40px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover { color: #e67e22; }
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 8px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: 0.3s all ease;
+}
+.btn:hover { background-color: #d35400; transform: scale(1.05); }
 
-    </style>
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #eee;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+@media (max-width:768px){
+    section { margin:15px 10px; padding:15px; }
+    nav { display:flex; flex-wrap:wrap; justify-content:center; }
+}
+
+/* Modal image */
+.modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; }
+.modal-content { max-width:90%; max-height:90%; border-radius:10px; animation: zoomFade 0.5s ease; }
+@keyframes zoomFade { from{transform:scale(0.7); opacity:0;} to{transform:scale(1); opacity:1;} }
+.close { position:absolute; top:20px; right:30px; font-size:40px; color:white; font-weight:bold; cursor:pointer; }
+.close:hover { color:#e67e22; }
+
+</style>
 </head>
 <body>
 
-    <header>
-        <img src="Issouf.png" alt="Photo de Issouf" class="profile-pic" onclick="openModal(this)">
-        <h1>OUEDRAOGO Issouf</h1>
-        <p>Développeur Full-Stack | Java, PHP, HTML, CSS, JavaScript | Ouagadougou</p>
-        <nav>
-            <a href="#summary">Résumé</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#academic-projects">Projets Académiques</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+<img src="Issouf.png" alt="Photo de Issouf" class="profile-pic" onclick="openModal(this)">
+<h1>OUEDRAOGO Issouf</h1>
+<p>Développeur Full-Stack | Java, PHP, HTML, CSS, JavaScript | Ouagadougou</p>
+<nav>
+    <a href="#summary">Résumé</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets</a>
+    <a href="#academic-projects">Projets Académiques</a>
+    <a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <section id="summary">
-        <h2>Résumé</h2>
-        <p>Développeur Full-Stack spécialisé en Java, PHP, HTML, CSS et JavaScript. Capable de m’adapter rapidement à d’autres technologies comme Python et Django. Passionné par la création d’applications web performantes et sécurisées.</p>
-    </section>
+<section id="summary">
+<h2>Résumé</h2>
+<p>Développeur Full-Stack spécialisé en Java, PHP, HTML, CSS et JavaScript. Capable de m’adapter rapidement à d’autres technologies comme Python et Django. Passionné par la création d’applications web performantes et sécurisées.</p>
+</section>
 
-    <section id="skills">
-        <h2>Compétences Full-Stack</h2>
-        <div class="skill-badges">
-            <span class="badge frontend">HTML</span>
-            <span class="badge frontend">CSS</span>
-            <span class="badge frontend">JavaScript</span>
-            <span class="badge backend">Java</span>
-            <span class="badge backend">PHP</span>
-            <span class="badge database">MySQL</span>
-            <span class="badge database">PostgreSQL</span>
-            <span class="badge database">MongoDB</span>
-            <span class="badge tools">Git</span>
-            <span class="badge tools">GitHub</span>
-            <span class="badge tools">Docker</span>
-            <span class="badge tools">VS Code</span>
-            <span class="badge secondary">Python</span>
-            <span class="badge secondary">Django</span>
-        </div>
-    </section>
+<section id="skills">
+<h2>Compétences Full-Stack</h2>
+<div class="skill-badges">
+    <span class="badge frontend">HTML</span>
+    <span class="badge frontend">CSS</span>
+    <span class="badge frontend">JavaScript</span>
+    <span class="badge backend">Java</span>
+    <span class="badge backend">PHP</span>
+    <span class="badge database">MySQL</span>
+    <span class="badge database">PostgreSQL</span>
+    <span class="badge database">MongoDB</span>
+    <span class="badge tools">Git</span>
+    <span class="badge tools">GitHub</span>
+    <span class="badge tools">Docker</span>
+    <span class="badge tools">VS Code</span>
+    <span class="badge secondary">Python</span>
+    <span class="badge secondary">Django</span>
+</div>
+</section>
 
-    <section id="projects">
-        <h2>Projets</h2>
-        <ul>
-            <li>
-                <strong>Application Calculatrice</strong> – Java  
-                <p>Application simple et optimisée pour effectuer des calculs basiques et scientifiques.</p>
-            </li>
-            <li>
-                <strong>Application de Gestion de Vente</strong> – Laravel + MySQL  
-                <p>Gestion complète des ventes : suivi des stocks, facturation, gestion clients et reporting.</p>
-            </li>
-            <li>
-                <strong>Site Web de Vente d’Habits</strong> – HTML, CSS, JavaScript, PHP  
-                <p>Site e-commerce simple permettant de consulter des articles, gérer un panier et simuler une commande.</p>
-            </li>
-        </ul>
-    </section>
+<section id="projects">
+<h2>Projets</h2>
+<ul>
+<li>
+<strong>Application Calculatrice</strong> – Java  
+<p>Application simple et optimisée pour effectuer des calculs basiques et scientifiques.</p>
+</li>
+<li>
+<strong>Application de Gestion de Vente</strong> – Laravel + MySQL  
+<p>Gestion complète des ventes : suivi des stocks, facturation, gestion clients et reporting.</p>
+</li>
+<li>
+<strong>Site Web de Vente d’Habits</strong> – HTML, CSS, JavaScript, PHP  
+<p>Site e-commerce simple permettant de consulter des articles, gérer un panier et simuler une commande.</p>
+</li>
+</ul>
+</section>
 
-    <section id="academic-projects">
-        <h2>Projets Académiques</h2>
-        <ul>
-            <li>
-                <strong>Algorithme de programmation des cours</strong> – Python + Django  
-                <p>Projet de fin de licence : génération automatique des emplois du temps universitaires, gestion des conflits et interface web.</p>
-                <a href="#" class="btn">Voir sur GitHub</a>
-            </li>
-            <li>
-                <strong>Voyageur de Commerce (TSP)</strong> – Python  
-                <p>Optimisation des parcours entre plusieurs villes, visualisation des résultats et calcul des distances.</p>
-                <a href="#" class="btn">Voir sur GitHub</a>
-            </li>
-        </ul>
-    </section>
+<section id="academic-projects">
+<h2>Projets Académiques</h2>
+<ul>
+<li>
+<strong>Algorithme de programmation des cours</strong> – Python + Django  
+<p>Projet de fin de licence : génération automatique des emplois du temps universitaires, gestion des conflits et interface web.</p>
+<a href="#" class="btn">Voir sur GitHub</a>
+</li>
+<li>
+<strong>Voyageur de Commerce (TSP)</strong> – Python  
+<p>Optimisation des parcours entre plusieurs villes, visualisation des résultats et calcul des distances.</p>
+<a href="#" class="btn">Voir sur GitHub</a>
+</li>
+</ul>
+</section>
 
-    <section id="education">
-        <h2>Éducation</h2>
-        <ul>
-            <li><strong>Licence Informatique</strong> – Université Norbert ZONGO, UFR/ST (2022-2023)</li>
-            <li><strong>DEUG II</strong> – Université Norbert ZONGO, UFR/ST/INFORMATIQUE (08/2022)</li>
-            <li><strong>Baccalauréat série D</strong> – Lycée Départemental de La-Toden (07/2018)</li>
-        </ul>
-    </section>
+<section id="education">
+<h2>Éducation</h2>
+<ul>
+<li><strong>Licence Informatique</strong> – Université Norbert ZONGO, UFR/ST (2022-2023)</li>
+<li><strong>DEUG II</strong> – Université Norbert ZONGO, UFR/ST/INFORMATIQUE (08/2022)</li>
+<li><strong>Baccalauréat série D</strong> – Lycée Départemental de La-Toden (07/2018)</li>
+</ul>
+</section>
 
-    <section id="languages">
-        <h2>Langues</h2>
-        <ul>
-            <li>Mooré : lu, écrit, parlé</li>
-            <li>Français : lu, écrit, parlé</li>
-            <li>Anglais : lu, écrit, parlé</li>
-        </ul>
-    </section>
+<section id="languages">
+<h2>Langues</h2>
+<ul>
+<li>Mooré : lu, écrit, parlé</li>
+<li>Français : lu, écrit, parlé</li>
+<li>Anglais : lu, écrit, parlé</li>
+</ul>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p><i class="fas fa-phone"></i> Téléphone : 64732901 / 73626401</p>
-        <p><i class="fas fa-envelope"></i> Email : ouedraogissouf64@gmail.com</p>
-        <h3>Mes Liens</h3>
-        <a href="https://SmartTechDev52.github.io/SmartTechDev/" class="btn"><i class="fas fa-globe"></i> Portfolio en ligne</a>
-        <a href="https://github.com/SmartTechDev52" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    </section>
+<section id="contact">
+<h2>Contact</h2>
+<p><i class="fas fa-phone"></i> Téléphone : 64732901 / 73626401</p>
+<p><i class="fas fa-envelope"></i> Email : ouedraogissouf64@gmail.com</p>
+<h3>Mes Liens</h3>
+<a href="https://SmartTechDev52.github.io/SmartTechDev/" class="btn"><i class="fas fa-globe"></i> Portfolio en ligne</a>
+<a href="https://github.com/SmartTechDev52" class="btn"><i class="fab fa-github"></i> GitHub</a>
+<a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+</section>
 
-    <footer>
-        <p>Mis à jour le 12 septembre 2025 à Ouagadougou</p>
-    </footer>
+<footer>
+<p>Mis à jour le 12 septembre 2025 à Ouagadougou</p>
+</footer>
 
-    <!-- Modal pour agrandir la photo -->
-    <div id="imgModal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
+<!-- Modal pour agrandir la photo -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+<span class="close">&times;</span>
+<img class="modal-content" id="modalImg">
+</div>
 
-    <script>
-    function openModal(imgElement) {
-      document.getElementById("imgModal").style.display = "flex";
-      document.getElementById("modalImg").src = imgElement.src;
-    }
-    function closeModal() {
-      document.getElementById("imgModal").style.display = "none";
-    }
-    </script>
+<script>
+// Modal photo
+function openModal(imgElement){
+  document.getElementById("imgModal").style.display="flex";
+  document.getElementById("modalImg").src=imgElement.src;
+}
+function closeModal(){ document.getElementById("imgModal").style.display="none"; }
+
+// Animation fade-in sections
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => observer.observe(section));
+});
+</script>
 
 </body>
 </html>
