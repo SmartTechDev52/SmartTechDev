@@ -39,7 +39,12 @@
             border: 4px solid white;
             margin-bottom: 15px;
             object-fit: cover;
-            object-position: center 25%; /* 👈 décale le cadrage vers le bas */
+            object-position: center 20%; /* 👈 décale un peu vers le bas */
+            cursor: pointer; /* main au survol */
+            transition: transform 0.3s;
+        }
+        header .profile-pic:hover {
+            transform: scale(1.05);
         }
         header h1 { margin: 0; font-size: 2em; }
         header p { margin: 5px 0 20px; font-size: 1.1em; }
@@ -120,12 +125,40 @@
             section { margin: 15px 10px; padding: 15px; }
             nav { display: flex; flex-wrap: wrap; justify-content: center; }
         }
+
+        /* ==================== MODAL (zoom photo) ==================== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover { color: #e67e22; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="Issouf.png" alt="Photo de Issouf" class="profile-pic">
+        <img src="Issouf.png" alt="Photo de Issouf" class="profile-pic" onclick="openModal(this)">
         <h1>OUEDRAOGO Issouf</h1>
         <p>Développeur Full-Stack | Ouagadougou</p>
         <nav>
@@ -221,8 +254,24 @@
     </section>
 
     <footer>
-        <p>Mis à jour le 10 septembre 2025 à Ouagadougou</p>
+        <p>Mis à jour le 12 septembre 2025 à Ouagadougou</p>
     </footer>
+
+    <!-- ==================== MODAL IMAGE ==================== -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+    function openModal(imgElement) {
+      document.getElementById("imgModal").style.display = "flex";
+      document.getElementById("modalImg").src = imgElement.src;
+    }
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+    </script>
 
 </body>
 </html>
