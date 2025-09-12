@@ -39,8 +39,8 @@
             border: 4px solid white;
             margin-bottom: 15px;
             object-fit: cover;
-            object-position: center 20%; /* 👈 décale un peu vers le bas */
-            cursor: pointer; /* main au survol */
+            object-position: center 20%;
+            cursor: pointer;
             transition: transform 0.3s;
         }
         header .profile-pic:hover {
@@ -78,27 +78,28 @@
         .backend { background-color: #3498db; }
         .database { background-color: #2ecc71; }
         .tools { background-color: #f39c12; }
+        .secondary { background-color: #95a5a6; }
 
-        #projects ul {
+        #projects ul, #academic-projects ul {
             list-style: none;
             padding: 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
-        #projects li {
+        #projects li, #academic-projects li {
             background: #fff;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        #projects li:hover {
+        #projects li:hover, #academic-projects li:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
-        #projects strong { color: #0a3d62; font-size: 1.1em; }
-        #projects p { font-size: 0.9em; margin: 8px 0; }
+        #projects strong, #academic-projects strong { color: #0a3d62; font-size: 1.1em; }
+        #projects p, #academic-projects p { font-size: 0.9em; margin: 8px 0; }
 
         .btn {
             display: inline-block;
@@ -126,7 +127,7 @@
             nav { display: flex; flex-wrap: wrap; justify-content: center; }
         }
 
-        /* ==================== MODAL (zoom photo) ==================== */
+        /* Modal pour image */
         .modal {
             display: none;
             position: fixed;
@@ -153,6 +154,7 @@
             cursor: pointer;
         }
         .close:hover { color: #e67e22; }
+
     </style>
 </head>
 <body>
@@ -160,18 +162,19 @@
     <header>
         <img src="Issouf.png" alt="Photo de Issouf" class="profile-pic" onclick="openModal(this)">
         <h1>OUEDRAOGO Issouf</h1>
-        <p>Développeur Full-Stack | Ouagadougou</p>
+        <p>Développeur Full-Stack | Java, PHP, HTML, CSS, JavaScript | Ouagadougou</p>
         <nav>
             <a href="#summary">Résumé</a>
             <a href="#skills">Compétences</a>
             <a href="#projects">Projets</a>
+            <a href="#academic-projects">Projets Académiques</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section id="summary">
         <h2>Résumé</h2>
-        <p>Développeur Full-Stack passionné par les technologies web et Java, je crée des applications performantes et sécurisées avec React, Node.js, Laravel et MySQL. Motivé à rejoindre des projets ambitieux et à résoudre des problèmes complexes.</p>
+        <p>Développeur Full-Stack spécialisé en Java, PHP, HTML, CSS et JavaScript. Capable de m’adapter rapidement à d’autres technologies comme Python et Django. Passionné par la création d’applications web performantes et sécurisées.</p>
     </section>
 
     <section id="skills">
@@ -180,11 +183,8 @@
             <span class="badge frontend">HTML</span>
             <span class="badge frontend">CSS</span>
             <span class="badge frontend">JavaScript</span>
-            <span class="badge frontend">React</span>
             <span class="badge backend">Java</span>
-            <span class="badge backend">Node.js</span>
-            <span class="badge backend">Laravel</span>
-            <span class="badge backend">Django</span>
+            <span class="badge backend">PHP</span>
             <span class="badge database">MySQL</span>
             <span class="badge database">PostgreSQL</span>
             <span class="badge database">MongoDB</span>
@@ -192,6 +192,8 @@
             <span class="badge tools">GitHub</span>
             <span class="badge tools">Docker</span>
             <span class="badge tools">VS Code</span>
+            <span class="badge secondary">Python</span>
+            <span class="badge secondary">Django</span>
         </div>
     </section>
 
@@ -200,26 +202,30 @@
         <ul>
             <li>
                 <strong>Application Calculatrice</strong> – Java  
-                <p>Application simple mais optimisée permettant d’effectuer des calculs basiques et scientifiques.</p>
+                <p>Application simple et optimisée pour effectuer des calculs basiques et scientifiques.</p>
             </li>
             <li>
                 <strong>Application de Gestion de Vente</strong> – Laravel + MySQL  
-                <p>Gestion complète des ventes : suivi des stocks, génération automatique de factures, gestion des clients et reporting.</p>
-            </li>
-            <li>
-                <strong>Application de Bibliothèque</strong> – Java + MySQL  
-                <p>Système de gestion des emprunts : inscription des lecteurs, suivi des prêts, disponibilité des livres.</p>
+                <p>Gestion complète des ventes : suivi des stocks, facturation, gestion clients et reporting.</p>
             </li>
             <li>
                 <strong>Site Web de Vente d’Habits</strong> – HTML, CSS, JavaScript, PHP  
                 <p>Site e-commerce simple permettant de consulter des articles, gérer un panier et simuler une commande.</p>
             </li>
+        </ul>
+    </section>
+
+    <section id="academic-projects">
+        <h2>Projets Académiques</h2>
+        <ul>
             <li>
-                <strong>Application To-Do List</strong> – React + Node.js + MongoDB  
+                <strong>Algorithme de programmation des cours</strong> – Python + Django  
+                <p>Projet de fin de licence : génération automatique des emplois du temps universitaires, gestion des conflits et interface web.</p>
                 <a href="#" class="btn">Voir sur GitHub</a>
             </li>
             <li>
-                <strong>Blog Full-Stack</strong> – Laravel + MySQL  
+                <strong>Voyageur de Commerce (TSP)</strong> – Python  
+                <p>Optimisation des parcours entre plusieurs villes, visualisation des résultats et calcul des distances.</p>
                 <a href="#" class="btn">Voir sur GitHub</a>
             </li>
         </ul>
@@ -249,7 +255,7 @@
         <p><i class="fas fa-envelope"></i> Email : ouedraogissouf64@gmail.com</p>
         <h3>Mes Liens</h3>
         <a href="https://SmartTechDev52.github.io/SmartTechDev/" class="btn"><i class="fas fa-globe"></i> Portfolio en ligne</a>
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://github.com/SmartTechDev52" class="btn"><i class="fab fa-github"></i> GitHub</a>
         <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </section>
 
@@ -257,7 +263,7 @@
         <p>Mis à jour le 12 septembre 2025 à Ouagadougou</p>
     </footer>
 
-    <!-- ==================== MODAL IMAGE ==================== -->
+    <!-- Modal pour agrandir la photo -->
     <div id="imgModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImg">
