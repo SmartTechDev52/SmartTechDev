@@ -121,6 +121,17 @@ footer {
 .close { position:absolute; top:20px; right:30px; font-size:40px; color:white; font-weight:bold; cursor:pointer; }
 .close:hover { color:#e67e22; }
 
+.placeholder {
+    width:100%;
+    height:180px;
+    background-color:#ddd;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#888;
+    margin-bottom:10px;
+}
 </style>
 </head>
 <body>
@@ -167,16 +178,19 @@ footer {
 <h2>Projets</h2>
 <ul>
 <li>
-<strong>Application Calculatrice</strong> – Java  
-<p>Application simple et optimisée pour effectuer des calculs basiques et scientifiques.</p>
+  <div class="placeholder">Image à ajouter</div>
+  <strong>Application Calculatrice</strong> – Java  
+  <p>Application simple et optimisée pour effectuer des calculs basiques et scientifiques.</p>
 </li>
 <li>
-<strong>Application de Gestion de Vente</strong> – Laravel + MySQL  
-<p>Gestion complète des ventes : suivi des stocks, facturation, gestion clients et reporting.</p>
+  <div class="placeholder">Image à ajouter</div>
+  <strong>Application de Gestion de Vente</strong> – Laravel + MySQL  
+  <p>Gestion complète des ventes : suivi des stocks, facturation, gestion clients et reporting.</p>
 </li>
 <li>
-<strong>Site Web de Vente d’Habits</strong> – HTML, CSS, JavaScript, PHP  
-<p>Site e-commerce simple permettant de consulter des articles, gérer un panier et simuler une commande.</p>
+  <div class="placeholder">Image à ajouter</div>
+  <strong>Site Web de Vente d’Habits</strong> – HTML, CSS, JavaScript, PHP  
+  <p>Site e-commerce simple permettant de consulter des articles, gérer un panier et simuler une commande.</p>
 </li>
 </ul>
 </section>
@@ -185,14 +199,16 @@ footer {
 <h2>Projets Académiques</h2>
 <ul>
 <li>
-<strong>Algorithme de programmation des cours</strong> – Python + Django  
-<p>Projet de fin de licence : génération automatique des emplois du temps universitaires, gestion des conflits et interface web.</p>
-<a href="#" class="btn">Voir sur GitHub</a>
+  <div class="placeholder">Image à ajouter</div>
+  <strong>Algorithme de programmation des cours</strong> – Python + Django  
+  <p>Projet de fin de licence : génération automatique des emplois du temps universitaires, gestion des conflits et interface web.</p>
+  <a href="#" class="btn">Voir sur GitHub</a>
 </li>
 <li>
-<strong>Voyageur de Commerce (TSP)</strong> – Python  
-<p>Optimisation des parcours entre plusieurs villes, visualisation des résultats et calcul des distances.</p>
-<a href="#" class="btn">Voir sur GitHub</a>
+  <div class="placeholder">Image à ajouter</div>
+  <strong>Voyageur de Commerce (TSP)</strong> – Python  
+  <p>Optimisation des parcours entre plusieurs villes, visualisation des résultats et calcul des distances.</p>
+  <a href="#" class="btn">Voir sur GitHub</a>
 </li>
 </ul>
 </section>
@@ -231,27 +247,31 @@ footer {
 
 <!-- Modal pour agrandir la photo -->
 <div id="imgModal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
-<img class="modal-content" id="modalImg">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
 </div>
 
 <script>
-// Modal photo
+// Fonction pour ouvrir le modal avec l'image cliquée
 function openModal(imgElement){
-  document.getElementById("imgModal").style.display="flex";
-  document.getElementById("modalImg").src=imgElement.src;
+    document.getElementById("imgModal").style.display = "flex";
+    document.getElementById("modalImg").src = imgElement.src;
 }
-function closeModal(){ document.getElementById("imgModal").style.display="none"; }
 
-// Animation fade-in sections
+// Fonction pour fermer le modal
+function closeModal(){
+    document.getElementById("imgModal").style.display = "none";
+}
+
+// Animation fade-in des sections lors du scroll
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  }, { threshold: 0.2 });
-  sections.forEach(section => observer.observe(section));
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add("visible");
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
 });
 </script>
 
